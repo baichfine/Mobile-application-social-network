@@ -1,0 +1,32 @@
+<ion-header >
+  <ion-toolbar class="colorbg1">
+  <ion-icon (click)="back()" class="icon2" name="arrow-back"></ion-icon><ion-title >{{data.nameUser}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="colorbg">
+  <ion-card >
+    <ion-card-content class="color" >
+      <ion-card *ngFor="let dat of dataDialog">
+        <ion-card-content>
+          <div class="color" *ngIf="data.idUser == dat.to_id;">
+       <ion-item>
+         <ion-avatar><img src="{{ fhoto }}"/></ion-avatar>
+         <p><span id="showName">{{dat.message}} &nbsp;</span></p>
+         </ion-item>
+         </div>
+         <div class="color3" *ngIf="data.idUser != dat.to_id;">
+         <ion-item>
+           <ion-avatar><img src="{{ data.fhotoUser }}"/></ion-avatar>
+           <p><span id="showName">{{dat.message}} &nbsp;</span></p>
+           </ion-item>
+           </div>
+         </ion-card-content>
+      </ion-card>
+    </ion-card-content>
+ </ion-card>
+</ion-content>
+<ion-footer >
+<ion-toolbar class="color2">
+<ion-item><ion-input name="dat.idData"   [(ngModel)]="message" required [ngModelOptions]="{standalone: true}"></ion-input><ion-icon (click)="sendMessage()" class="icon" name="send"></ion-icon></ion-item>
+</ion-toolbar>
+</ion-footer>

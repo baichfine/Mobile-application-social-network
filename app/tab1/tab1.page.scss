@@ -1,0 +1,52 @@
+ion-item {
+  font-size: 14px;
+}
+ion-input {
+  text-align: center;
+}
+ion-avatar {
+  margin-left: 30px;
+}
+.icon {
+  font-size: 18px;
+}
+table {
+  width: 100%;
+}
+.colorbutton p {
+  font-size: 12px;
+}
+.colorbutton{
+  margin-top: 5px;
+  margin-left: 140px;
+  width: 140px;
+  height: 30px;
+  --background: #DC143C;
+}
+ion-button{
+    --background: #DC143C;
+    margin: auto;
+    width: 95%;
+    font-size: 12px;
+}
+.font {
+  font-size: 18px;
+  font-style: italic;
+  color:black;
+}
+.font1 {
+  font-weight: bold;
+  color: #DC143C;
+}
+.color {
+  padding: 0;
+  background: white;
+}
+.colorbg2 {
+  --background: black;
+}
+.colorbg1 {
+  --background: black;
+  color:#DC143C;
+  font-weight: bold;
+}

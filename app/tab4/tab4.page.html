@@ -1,0 +1,21 @@
+<ion-header >
+  <ion-toolbar class="colorbg1">
+    <ion-title >Отправка и получение фотографий</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="colorbg2">
+  <ion-button class="colorbutton" expand="block" (click)="choiceFoto()">Выбрать фото</ion-button>
+  <div class="image"><img src="{{img}}"></div>
+  <ion-button class="colorbutton" expand="block" (click)="loadFoto()">Отправить фото</ion-button>
+  <ion-button class="colorbutton" expand="block" (click)="photograph()"><p>Сделать фото <ion-icon item-right name="camera"></ion-icon></p></ion-button>
+<img src="{{cameraImg}}">
+<form #uploadbase64 = "ngForm" action="http://studentapi.myknitu.ru/send2/" method="post" (ngSubmit) = "base64Load(uploadbase64.value)" enctype="multipart/form-data">
+  <textarea class="base" rows="6" name="cameraImg" [(ngModel)]="cameraImg"></textarea>
+  <ion-button class="colorbutton" expand='block' type="submit" value="Send">Отправить</ion-button> </form>
+    <ion-grid><ion-row>
+      <ion-col size-lg="6" size-md = "6" sizeXs="4" *ngFor="let image of images">
+            <img  ng-show=" image.img " src="{{ image.img }}"/>
+      </ion-col>
+    </ion-row></ion-grid>
+</ion-content>

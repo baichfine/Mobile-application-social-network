@@ -1,0 +1,13 @@
+<ion-header >
+  <ion-toolbar class="colorbg1">
+    <ion-title >Галлерея</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="colorbg2">
+    <ion-row>
+    <ion-col size-lg="6" size-md = "6" sizeXs="4" *ngFor="let image of images">
+          <img src="{{ image.link }}">
+    </ion-col>
+    </ion-row>
+</ion-content>

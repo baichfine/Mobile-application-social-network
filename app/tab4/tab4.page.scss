@@ -1,0 +1,33 @@
+.colorbg1 {
+  --background: black;
+  color:#DC143C;
+  font-weight: bold;
+}
+.colorbg2 {
+  --background: black;
+}
+.colorbg3 {
+  color:#DC143C;
+  font-weight: bold;
+  width: 40px;
+  height: 40px;
+}
+
+.base {
+  width: 100%;
+}
+.colorbutton {
+  --background: #DC143C;
+  width: 50%;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.image {
+margin: auto;
+right: 0;
+left: 0;
+top: 0;
+bottom: 0;
+
+}

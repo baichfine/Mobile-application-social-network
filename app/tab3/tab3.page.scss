@@ -1,0 +1,67 @@
+.searchNew {
+  padding-bottom: 20px;
+}
+.cent {
+  color:#DC143C;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  padding-top: 20px;
+}
+.new{
+  border-color: #DC143C;
+  border-style: solid;
+}
+.ion{
+  width: 300px;
+  margin: auto;
+}
+.ion2 {
+  padding-top: 15px;
+}
+.ion3 {
+  padding-top: 10px;
+  padding-bottom: 15px;
+
+}
+.ion3 ion-button{
+  --background: #DC143C;
+  margin: auto;
+  width: 95%;
+  height: 30px;
+  font-size: 14px;
+}
+ion-button{
+    --background: #DC143C;
+    margin: auto;
+    width: 80%;
+    font-size: 15px;
+}
+ion-avatar {
+  margin-top: 20px;
+  margin-left: 30px;
+}
+ion-item {
+  font-size: 14px;
+}
+.font {
+  font-style: italic;
+  color:black;
+}
+.font1 {
+  font-weight: bold;
+  color: #DC143C;
+}
+.color {
+  padding: 0;
+  background: white;
+}
+.colorbg2 {
+  --background: black;
+  margin: auto;
+}
+.colorbg1 {
+  --background: black;
+  color:#DC143C;
+  font-weight: bold;
+}

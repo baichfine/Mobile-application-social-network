@@ -1,0 +1,45 @@
+ion-item{
+  border-color: #DC143C;
+  border-style: solid;
+}
+ion-input{
+  width: 300px;
+}
+
+.ion1 {
+  padding-top: 3%;
+}
+.alertcss {
+  padding-left: 100%;
+  --background: black !important;
+  color: #DC143C !important;
+}
+
+.buttoncss {
+  color:#DC143C;
+}
+.ion2 {
+  padding-top: 20px;
+}
+
+ion-button{
+    --background: #DC143C;
+    margin: auto;
+    width: 80%;
+    font-size: 15px;
+}
+
+.colorbg {
+  --background: black;
+  color:#DC143C;
+  font-weight: bold;
+  text-align: center;
+}
+.colorbg1 {
+  margin: 0;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
+}

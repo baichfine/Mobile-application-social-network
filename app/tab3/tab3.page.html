@@ -1,0 +1,45 @@
+<ion-header >
+  <ion-toolbar class="colorbg1">
+    <ion-title >Контакты</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="colorbg2">
+  <div class="ion">
+  <ion-item class="new">
+              <ion-input name="id" type="id" placeholder="Поиск по ID" [(ngModel)]="id" required [ngModelOptions]="{standalone: true}"></ion-input>
+  </ion-item>
+  </div>
+  <div class="ion2"> <ion-button  size="large"  expand="block" (click)="search()">Поиск</ion-button> </div>
+<div *ngIf=" searchID == true " class="searchNew">
+<div class="cent"><ion-text> Результаты поиска </ion-text></div>
+  <ion-card>
+  <ion-avatar><img src="{{ userID.img }}"></ion-avatar>
+   <ion-card-content class="color" >
+   <ion-item><ion-label class="font1"><ion-icon name="body"></ion-icon>&nbsp;&nbsp; Фамилия</ion-label><ion-text class="font"> {{ userID.family }} </ion-text></ion-item>
+   <ion-item><ion-label class="font1"><ion-icon name="logo-vk"></ion-icon>&nbsp;&nbsp; Страница Вконтакте</ion-label><ion-text class="font"> {{ userID.vk }} </ion-text></ion-item>
+   <ion-item><ion-label class="font1"><ion-icon name="gift"></ion-icon>&nbsp;&nbsp; Дата рождения</ion-label><ion-text class="font"> {{ userID.birthday }} </ion-text></ion-item>
+   <ion-item><ion-label class="font1"><ion-icon name="call"></ion-icon>&nbsp;&nbsp; Номер телефона</ion-label><ion-text class="font"> {{ userID.phonenumber }} </ion-text></ion-item>
+   <ion-item><ion-label class="font1"><ion-icon name="person"></ion-icon>&nbsp;&nbsp; Пользователь</ion-label><ion-text class="font"> {{ userID.user }} </ion-text></ion-item>
+   <ion-item><ion-label class="font1"><ion-icon name="logo-skype"></ion-icon>&nbsp;&nbsp; Skype</ion-label><ion-text class="font"> {{ userID.skype }} </ion-text></ion-item>
+   <ion-item><ion-label class="font1"><ion-icon name="key"></ion-icon>&nbsp;&nbsp; ID</ion-label><ion-text class="font"> {{ userID.id_user }} </ion-text></ion-item>
+</ion-card-content>
+<div class="ion3"> <ion-button  size="large"  expand="block" (click)="goDialog(userID.id_user,userID.user,userID.img)">Начать диалог</ion-button> </div>
+</ion-card>
+</div>
+<div class="cent"><ion-text> Пользователи </ion-text></div>
+  <ion-card *ngFor="let dat of data">
+    <ion-avatar>
+        <img src="{{ dat.img }}">
+    </ion-avatar>
+     <ion-card-content class="color" >
+     <ion-item><ion-label class="font1"><ion-icon name="body"></ion-icon>&nbsp;&nbsp; Фамилия</ion-label><ion-text class="font"> {{ dat.family }} </ion-text></ion-item>
+     <ion-item><ion-label class="font1"><ion-icon name="logo-vk"></ion-icon>&nbsp;&nbsp; Страница Вконтакте</ion-label><ion-text class="font"> {{ dat.vk }} </ion-text></ion-item>
+     <ion-item><ion-label class="font1"><ion-icon name="gift"></ion-icon>&nbsp;&nbsp; Дата рождения</ion-label><ion-text class="font"> {{ dat.birthday }} </ion-text></ion-item>
+     <ion-item><ion-label class="font1"><ion-icon name="call"></ion-icon>&nbsp;&nbsp; Номер телефона</ion-label><ion-text class="font"> {{ dat.phonenumber }} </ion-text></ion-item>
+     <ion-item><ion-label class="font1"><ion-icon name="person"></ion-icon>&nbsp;&nbsp; Пользователь</ion-label><ion-text class="font"> {{ dat.user }} </ion-text></ion-item>
+     <ion-item><ion-label class="font1"><ion-icon name="logo-skype"></ion-icon>&nbsp;&nbsp; Skype</ion-label><ion-text class="font"> {{ dat.skype }} </ion-text></ion-item>
+     <ion-item><ion-label class="font1"><ion-icon name="key"></ion-icon>&nbsp;&nbsp; ID</ion-label><ion-text class="font"> {{ dat.id }} </ion-text></ion-item>
+     </ion-card-content>
+     <div class="ion3"> <ion-button  size="large"  expand="block" (click)="goDialog(dat.id,dat.user,dat.img)">Начать диалог</ion-button> </div>
+  </ion-card>
+</ion-content>

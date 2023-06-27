@@ -1,0 +1,23 @@
+<ion-header >
+  <ion-toolbar class="colorbg1">
+    <ion-title >Профиль</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="colorbg2">
+  <table><tbody>
+    <tr><td><ion-avatar>
+          <img src="{{ fhoto }}"/>
+    </ion-avatar></td><td>
+      <ion-button class="colorbutton" expand="block" (click)="choiceFoto(false)"><p>Сменить фото <ion-icon class="icon" name="camera-reverse"></ion-icon></p></ion-button>
+      <ion-button class="colorbutton" expand="block" (click)="choiceFoto(true)"><p>Сделать фото <ion-icon class="icon" name="camera"></ion-icon></p></ion-button>
+      </td></tr>
+  </tbody>
+  </table>
+ <ion-card *ngFor="let dat of data">
+   <ion-card-content class="color" >
+  <ion-item><ion-label class="font1"><ion-icon name="{{ dat.symbal }}"></ion-icon>&nbsp;&nbsp; {{ dat.name }}</ion-label><ion-input [(ngModel)]="dat.dataName" required [ngModelOptions]="{standalone: true}"></ion-input></ion-item>
+   </ion-card-content>
+</ion-card>
+<div *ngIf="letter == false;" class="ion2"> <ion-button size="large"  expand="block" (click)="dataChange()">Сохранить изменения</ion-button></div>
+<div *ngIf="letter == true; " class="ion2"> <ion-button size="large"  expand="block" (click)="dataChange()">Данные успешно изменены</ion-button> </div>
+</ion-content>

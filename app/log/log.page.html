@@ -1,0 +1,19 @@
+
+<ion-content class="colorbg">
+  <form  #form="ngForm" (ngSubmit)="register(form)" class="colorbg1">
+    <h3 class="colorbg"> Авторизация</h3>
+  <div class="ion">
+            <ion-item>
+              <ion-input name="email" type="email" placeholder="Ваша почта" [(ngModel)]="email" required [ngModelOptions]="{standalone: true}"></ion-input>
+            </ion-item>
+
+            </div>
+            <div class="ion1">
+            <ion-item>
+              <ion-input name="password" type="password" placeholder="Пароль" [(ngModel)]="password" required [ngModelOptions]="{standalone: true}"></ion-input>
+            </ion-item>
+</div>
+            <div class="ion2"> <ion-button  size="large" [disabled]="form.invalid" expand="block" (click)="log()">Войти</ion-button> </div>
+         <h6 (click)="toReg()" class="colorbg">Зарегистрироваться </h6>
+  </form>
+</ion-content>
